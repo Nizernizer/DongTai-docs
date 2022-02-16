@@ -267,7 +267,7 @@ Agent 配置
    * - 参数说明
      - dump 字节码的路径
 
-- **iast.server.url**
+- **dongtai.server.url**
 
 .. list-table::
    :widths: 4 20
@@ -277,7 +277,7 @@ Agent 配置
    * - 属性
      - 值
    * - 生效方式
-     - 启动时添加 ``-Diast.server.url=<https://openapi.iast.io>`` 
+     - 启动时添加 ``-Ddongtai.server.url=`` 
    * - 参数类型
      - 字符串
    * - 来源
@@ -288,6 +288,28 @@ Agent 配置
      - https://openapi.iast.io
    * - 参数说明
      - Server URL
+     
+- **dongtai.server.token**
+
+.. list-table::
+   :widths: 4 20
+   :header-rows: 1
+   :width: 100%
+
+   * - 属性
+     - 值
+   * - 生效方式
+     - 启动时添加 ``-Ddongtai.server.token=`` 
+   * - 参数类型
+     - 字符串
+   * - 来源
+     - 配置文件
+   * - 可选参数
+     - 字符串
+   * - 默认值
+     - user token
+   * - 参数说明
+     - Server Token
 
 - **iast.allhook.enable**
 
@@ -439,4 +461,5 @@ Agent 配置
 .. code-block:: bash
 
     java -javaagent:/path/to/agent.jar -Diast.mode=hunter/normal -jar SpringDemo.jar
+
 
